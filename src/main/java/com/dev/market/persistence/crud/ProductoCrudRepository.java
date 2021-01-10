@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public interface ProductoCrudRepository extends CrudRepository<Producto,Integer> {
@@ -22,6 +23,8 @@ List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria);
  * hay que seguir la norma de nombre como "findBy"+IdCategoria...
  * si es declara con @Query, no es necesario respetar la norma de Querymetohd y se puede llamar al metodo como se guste
  */
+
+Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
 
 
 }

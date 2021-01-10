@@ -4,6 +4,7 @@ import com.dev.market.persistence.crud.ProductoCrudRepository;
 import com.dev.market.persistence.entity.Producto;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ProductoRepository {
 
@@ -15,6 +16,10 @@ public class ProductoRepository {
 
     public List<Producto> getByCategoria(int idCategoria){
         return objProductoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
+    }
+
+    public Optional<List<Producto>> getEscasos(int cantidad){
+        return objProductoCrudRepository.findByCantidadStockLessThanAndEstado(cantidad,true) ;
     }
 
 
