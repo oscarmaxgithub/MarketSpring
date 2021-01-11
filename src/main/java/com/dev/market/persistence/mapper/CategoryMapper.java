@@ -10,15 +10,15 @@ import org.mapstruct.Mappings;
 @Mapper(componentModel = "spring")
 public interface CategoryMapper {
     @Mappings({
-            @Mapping(source = "idCateoria", target = "categoryId"),
+            @Mapping(source = "idCategoria", target = "categoryId"),
             @Mapping(source = "descripcion", target = "category"),
-            @Mapping(source = "estado", target = "active")
+            @Mapping(source = "estado", target = "active"),
     })
     Category toCategory(Categoria categoria);
 
     /**
      * InheritInverseConfiguration hace que el mapeo anterior se inverso  al devolver un mapeo
-     * @param category
+     *
      * @return
      */
     @InheritInverseConfiguration

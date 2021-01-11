@@ -21,6 +21,7 @@ dependencies {
 
 	implementation 'org.mapstruct:mapstruct:1.4.1.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.1.Final'
+	annotationProcessor 'org.projectlombok:lombok'
 }
 
 test {
