@@ -1,7 +1,7 @@
 package com.dev.market.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+//import lombok.Getter;
+//import lombok.Setter;
 
 import java.math.BigDecimal;
 
